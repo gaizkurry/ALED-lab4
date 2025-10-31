@@ -1,4 +1,4 @@
-AREA  80  80 1000 Admision
+AREA  80  80 10000 Admision
 AREA 160 300 1000 Triaje
 AREA 160 190 1000 SalaEspera
 AREA 320  80 1000 Box_Trauma
