@@ -115,8 +115,12 @@ public class FASTAReaderThreads {
 	 *         pattern in the data.
 	 */
 	public List<Integer> search(byte[] pattern) {
-		// TODO
-		return null;
+		int cores = Runtime.getRuntime().availableProcessors();
+		int size = validBytes/cores;
+		
+		
+		ExecutorService executor = Executors.newFixedThreadPool(cores);
+		executor.shutdown();
 	}
 
 	public static void main(String[] args) {
