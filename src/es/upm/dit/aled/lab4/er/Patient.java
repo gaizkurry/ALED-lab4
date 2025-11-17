@@ -157,13 +157,12 @@ public class Patient extends Thread {
 	 */
 	@Override
 	public void run() {
-				
-		while(this.indexProtocol < this.protocol.size()) {
-		this.attendedAtLocation();
-		this.advanceProtocol();
-		}
 		
 		this.attendedAtLocation();
+		while(this.indexProtocol < this.protocol.size()) {
+		this.advanceProtocol();
+		this.attendedAtLocation();
+		}
 		EmergencyRoomGUI.getInstance().removePatient(this);
 	}
 
